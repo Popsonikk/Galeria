@@ -8,6 +8,7 @@ const authenticate = (req, res, next) => {
         const decode = jwt.verify(token, 'kodSzyfrujacy')
         // dodanie do request (req.user) danych zweryfikowanego usera 
         req.user = decode
+        res.locals.logged_user = decode.username;
         next()
     }
     catch (err) {
@@ -16,6 +17,7 @@ const authenticate = (req, res, next) => {
         //     message: 'Brak dostępu'
         // })
         res.send('Login in first!')
+        res.locals.logged_user = null;
     }
 }
 

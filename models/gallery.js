@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 const GallerySchema = new Schema({
   name: { type: String, maxLength: 100, required: true },
   description: { type: String, maxLength: 200 },
-  updated: { type: Date, default: Date.now() },
   user: { type: Schema.Types.ObjectId, ref: "User", required: true }
 }, { collection: 'galleries' });
 

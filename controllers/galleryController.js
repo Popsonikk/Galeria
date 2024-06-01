@@ -72,7 +72,7 @@ exports.gallery_add_post = [
       name: req.body.g_name,
       description: req.body.g_description,
       user: req.body.g_user,
-      updated: new Date(),
+      
     });
 
     // Sprawdzenie i obsługa ewentualnych błędów.
@@ -140,3 +140,26 @@ exports.gallery_browse = asyncHandler(async (req, res, next) => {
   const gallery_images = await Image.find({gallery: req.body.s_gallery}).exec();
   res.render("gallery_browse", { title: "View gallery:", galleries: all_galleries, images: gallery_images});
  });
+
+
+
+ exports.gallery_delete_get = asyncHandler(async (req, res, next) => {
+
+  const all_galleries = await Gallery.find({}).exec();
+  res.render("gallery_delete", { title: "Select gallery:", galleries: all_galleries});
+  
+});
+
+exports.gallery_delete_post = asyncHandler(async (req, res, next) => {
+
+
+  const gallery_images = await Image.find({gallery: req.body.s_gallery}).exec();
+  if (gallery_images.length> 0) {
+    return res.status(400).send("Cannot delete a gallery that contains images.");
+  }
+  await Gallery.deleteOne({ _id: req.body.s_gallery });
+
+  res.redirect('/galleries');
+  
+  
+});

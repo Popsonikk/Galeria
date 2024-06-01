@@ -131,6 +131,7 @@ exports.user_login_post = (req, res, next) => {
             //   }
             // es.cookie('mytoken', token, {maxAge: 600000, httpOnly: true })
             res.cookie('mytoken', token, {maxAge: 600000})
+            res.locals.logged_user = user.username;
             res.render('index', { title: 'Express' });
           } else {
             // hasło nieprawidłowe - wyślij jako obiekt JSON
