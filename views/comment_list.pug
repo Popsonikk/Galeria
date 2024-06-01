@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  if comment_list.length
+    each comment in comment_list
+      ul
+        li Komentarz: #{comment.name}; (#{comment.user.username})
+  else
+    p There are no any comments.
