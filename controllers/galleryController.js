@@ -20,23 +20,13 @@ exports.gallery_list = asyncHandler(async (req, res, next) => {
 // Kontroler formularza dodawania nowej galerii - GET.
 exports.gallery_add_get = asyncHandler(async (req, res, next) => {
 
-  // opcje formularza - inny dla admina inny dla zwykłego usera
   let opcje;
-  // lista wszystkich userów
   let all_users;
-
-  if (req.user.username === "admin") {
-    // dane do formularza admina
-    all_users = await User.find().sort({ last_name: 1 }).exec();
-    opcje = { "admin_user": true, "disabled": false }
-  } else {
-    // dane do formularza usera zwykłego
-    let owner_user = await User.findOne({ "username": req.user.username }).exec();
-    console.log(owner_user)
-    opcje = { "admin_user": false, "disabled": true, "owner_user": owner_user }
-    console.log(opcje)
-  }
-  // rendering formularza
+  let owner_user = await User.findOne({ "username": req.user.username }).exec();
+  console.log(owner_user)
+  opcje = { "admin_user": false, "disabled": true, "owner_user": owner_user }
+  console.log(opcje)
+  
   res.render("gallery_form", {
     title: "Add gallery",
     users: all_users,
@@ -145,18 +135,24 @@ exports.gallery_browse = asyncHandler(async (req, res, next) => {
 
  exports.gallery_delete_get = asyncHandler(async (req, res, next) => {
 
-  const all_galleries = await Gallery.find({}).exec();
-  res.render("gallery_delete", { title: "Select gallery:", galleries: all_galleries});
+  const all_galleries = await Gallery.find({user: res.locals.id}).exec();
+  let emptyGalleries = [];
+  for (let gallery of all_galleries) {
+    const gallery_images = await Image.find({ gallery: gallery._id }).exec();
+    if (gallery_images.length == 0) {
+      emptyGalleries = emptyGalleries.concat(gallery);
+    }
+    
+  }
+  res.render("gallery_delete", { title: "Delete gallery:", galleries: emptyGalleries});
   
 });
 
 exports.gallery_delete_post = asyncHandler(async (req, res, next) => {
 
 
-  const gallery_images = await Image.find({gallery: req.body.s_gallery}).exec();
-  if (gallery_images.length> 0) {
-    return res.status(400).send("Cannot delete a gallery that contains images.");
-  }
+  
+  
   await Gallery.deleteOne({ _id: req.body.s_gallery });
 
   res.redirect('/galleries');

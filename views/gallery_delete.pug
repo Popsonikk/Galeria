@@ -3,7 +3,7 @@ block content
  h1=title
  form(method='POST')
   div.form-group
-   label(for='s_gallery') Select gallery:
+   label(for='s_gallery') Wybierz pustą galerię do usunięcia:
    select#s_gallery.form-control(name='s_gallery' required)
     for gallery in galleries
      option(value=gallery._id) #{gallery.name}

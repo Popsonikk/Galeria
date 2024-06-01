@@ -54,3 +54,19 @@ exports.image_add_post = [
       }
   })
 ];
+
+exports.image_delete_get = asyncHandler(async (req, res, next) => {
+  const userGalleries = await Gallery.find({user: res.locals.id}).exec();
+  let userImages = [];
+    for (let gallery of userGalleries) {
+      const imagesInGallery = await Image.find({ gallery: gallery._id }).populate("gallery").exec();
+      userImages = userImages.concat(imagesInGallery);
+    }
+  res.render("image_delete", { title: "Usuń obraz z galerii", images: userImages });
+});
+
+exports.image_delete_post = asyncHandler(async (req, res, next) => {
+  await Image.deleteOne({ _id: req.body.s_image });
+
+  res.redirect('/images');
+});

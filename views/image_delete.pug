@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1= title
+    if images.length
+    each image in images
+        div.container
+            h2 #{image.name}
+            a Description: #{image.description}
+            br
+            a Gallery: #{image.gallery.name}
+            img.img-responsive(src=image.path alt=image.path style='height:200px; display:block; ')
+            form(method='POST')
+                input(type='hidden', name='s_image', value=image._id)
+                button.btn.btn-danger(type='submit') Delete
+    else
+        p Brak dodanych obrazów.
