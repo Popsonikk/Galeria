@@ -124,7 +124,7 @@ exports.user_login_post = (req, res, next) => {
           }
           if (result) {
             // hasło prawidłowe - wygeneruj i wyślij token w cookie
-            let token = jwt.sign({ username: user.username }, 'kodSzyfrujacy', { expiresIn: '1h' })
+            let token = jwt.sign({ username: user.username , id: user._id }, 'kodSzyfrujacy', { expiresIn: '1h' })
             //  res.json({
             //   message: 'Zalogowano',
             //   token: token,

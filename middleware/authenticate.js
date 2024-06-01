@@ -9,6 +9,7 @@ const authenticate = (req, res, next) => {
         // dodanie do request (req.user) danych zweryfikowanego usera 
         req.user = decode
         res.locals.logged_user = decode.username;
+        res.locals.id = decode.id;
         next()
     }
     catch (err) {

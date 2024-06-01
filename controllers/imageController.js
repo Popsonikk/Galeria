@@ -18,7 +18,7 @@ const User = require("../models/user");
 // IMAGE ADD GET
 
 exports.image_add_get = asyncHandler(async (req, res, next) => {
-  const all_galleries = await Gallery.find({}).populate("user").exec();
+  const all_galleries = await Gallery.find({user: res.locals.id}).populate("user").exec();
   res.render("image_form", { title: "add image:", galleries: all_galleries });
 });
 
