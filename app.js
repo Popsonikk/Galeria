@@ -34,6 +34,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Przykład własnego middleware.
+// app.use((req, res, next) => {
+  // console.log('Own middleware');
+  // next();
+// })
 
 // routes paths
 app.use('/', indexRouter);
@@ -59,4 +64,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
