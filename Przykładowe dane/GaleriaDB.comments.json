@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "665b3e43ed31d61cd452f18a"
+  },
+  "name": "Też lubię truskawki",
+  "user": {
+    "$oid": "665b3b51ed31d61cd452f106"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3e7bed31d61cd452f191"
+  },
+  "name": "Mój kot jest ładniejszy",
+  "user": {
+    "$oid": "665b3b67ed31d61cd452f10a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3efced31d61cd452f1ac"
+  },
+  "name": "Gdzie znalazłeś tą tapetę z Geraltem?",
+  "user": {
+    "$oid": "665b3b39ed31d61cd452f102"
+  },
+  "__v": 0
+}]

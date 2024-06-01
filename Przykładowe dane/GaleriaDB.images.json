@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "665b3c00ed31d61cd452f11d"
+  },
+  "name": "Banany",
+  "description": "Kiść bananów",
+  "path": "banan.jpg",
+  "gallery": {
+    "$oid": "665b3be8ed31d61cd452f116"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3c17ed31d61cd452f123"
+  },
+  "name": "Jabłko",
+  "description": "Jabłko polskie czerwone",
+  "path": "Jabłko.jpg",
+  "gallery": {
+    "$oid": "665b3be8ed31d61cd452f116"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3c44ed31d61cd452f129"
+  },
+  "name": "Truskawka",
+  "description": "Sezon letni",
+  "path": "truskawka.jpg",
+  "gallery": {
+    "$oid": "665b3be8ed31d61cd452f116"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3d19ed31d61cd452f144"
+  },
+  "name": "Brurko",
+  "description": "Gamingowe",
+  "path": "biurko.jpg",
+  "gallery": {
+    "$oid": "665b3c77ed31d61cd452f12e"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3d61ed31d61cd452f15f"
+  },
+  "name": "Kot",
+  "description": "Domowy",
+  "path": "kot.jpg",
+  "gallery": {
+    "$oid": "665b3d57ed31d61cd452f158"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3d78ed31d61cd452f165"
+  },
+  "name": "Pies",
+  "description": "Na spacerze",
+  "path": "pies.jpg",
+  "gallery": {
+    "$oid": "665b3d57ed31d61cd452f158"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3eabed31d61cd452f19d"
+  },
+  "name": "Vi",
+  "description": "Awatar z ligi",
+  "path": "vi awatar.jpg",
+  "gallery": {
+    "$oid": "665b3e94ed31d61cd452f196"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3eceed31d61cd452f1a3"
+  },
+  "name": "Tapeta",
+  "description": "Geralt na płotce",
+  "path": "982990.jpg",
+  "gallery": {
+    "$oid": "665b3e94ed31d61cd452f196"
+  },
+  "__v": 0
+}]

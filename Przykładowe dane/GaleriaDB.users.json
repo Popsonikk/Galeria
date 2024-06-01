@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "665b3b39ed31d61cd452f102"
+  },
+  "first_name": "Patryk",
+  "last_name": "Popek",
+  "username": "Popus",
+  "password": "$2b$10$aNPiepnJZwwd8OK0undkxO6D.dpFyS/ZKIaozKZTKOwghuwBkBOqW",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3b51ed31d61cd452f106"
+  },
+  "first_name": "Jan",
+  "last_name": "Kowalski",
+  "username": "Kowal",
+  "password": "$2b$10$NQAT8sUZJ5DT61rn.3fGwuJvkNJ4Uaxogjvcb7tsWF3IFIsvdoyyW",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3b67ed31d61cd452f10a"
+  },
+  "first_name": "Adam",
+  "last_name": "Nowak",
+  "username": "Nowy",
+  "password": "$2b$10$qk5gA6q8HzYZZ22ux7c16um1/q.9Ii218kIpBAMK/SSFAyEyr4Zem",
+  "__v": 0
+}]

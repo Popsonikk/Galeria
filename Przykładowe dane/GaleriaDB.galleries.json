@@ -1,0 +1,77 @@
+[{
+  "_id": {
+    "$oid": "665b3be8ed31d61cd452f116"
+  },
+  "name": "rośliny",
+  "description": "zdjęcia owoców",
+  "user": {
+    "$oid": "665b3b39ed31d61cd452f102"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3c77ed31d61cd452f12e"
+  },
+  "name": "meble",
+  "description": "Zakupione meble",
+  "user": {
+    "$oid": "665b3b39ed31d61cd452f102"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3c92ed31d61cd452f134"
+  },
+  "name": "Góry",
+  "description": "Wyjazd majówkowy",
+  "user": {
+    "$oid": "665b3b39ed31d61cd452f102"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3d57ed31d61cd452f158"
+  },
+  "name": "Zwierzęta",
+  "description": "Moje zwierzęta",
+  "user": {
+    "$oid": "665b3b51ed31d61cd452f106"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3d8ced31d61cd452f16a"
+  },
+  "name": "Miasta",
+  "description": "Stolice",
+  "user": {
+    "$oid": "665b3b51ed31d61cd452f106"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3e94ed31d61cd452f196"
+  },
+  "name": "Obrazy",
+  "description": "Tapety z komputera",
+  "user": {
+    "$oid": "665b3b67ed31d61cd452f10a"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "665b3f20ed31d61cd452f1b1"
+  },
+  "name": "Drzewa",
+  "description": "Leśne",
+  "user": {
+    "$oid": "665b3b39ed31d61cd452f102"
+  },
+  "__v": 0
+}]
